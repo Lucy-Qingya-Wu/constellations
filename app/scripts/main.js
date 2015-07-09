@@ -5,13 +5,18 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
-function drawStar(cx, cy, spikes, outerRadius, innerRadius) {
+var stars = {"coordinates": [
+  [102.0, 0.0], [103.0, 1.0], [104.0, 0.0], [105.0, 1.0]
+]};
+
+
+function drawStar(cx, cy, spikes, outerRadius, innerRadius, color) {
     var rot = Math.PI / 2 * 3;
     var x = cx;
     var y = cy;
     var step = Math.PI / spikes;
 
-   
+
     ctx.beginPath();
     ctx.moveTo(cx, cy - outerRadius)
     for (i = 0; i < spikes; i++) {
@@ -30,10 +35,15 @@ function drawStar(cx, cy, spikes, outerRadius, innerRadius) {
     ctx.lineWidth=5;
     ctx.strokeStyle='yellow';
     ctx.stroke();
-    ctx.fillStyle='yellow';
+    ctx.fillStyle=color;
     ctx.fill();
 
 }
 
 
-drawStar(400, 200, 6, 30, 15);
+drawStar(400, 200, 6, 30, 15, 'yellow');
+drawStar(200, 200, 6, 30, 15, 'yellow');
+drawStar(400, 200, 6, 130, 15, 'blue');
+drawStar(500, 200, 5, 30, 15, 'green');
+drawStar(600, 200, 6, 30, 15, 'purple');
+drawStar(800, 200, 6, 30, 15, 'pink')

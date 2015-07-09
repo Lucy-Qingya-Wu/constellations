@@ -1,7 +1,13 @@
 body {
-  
+
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #FFF;
+  background-color: black;
+  background: -webkit-linear-gradient(#00111e 30%, #033d5e);
+  background: -moz-linear-gradient(#00111e 30%, #033d5e);
+  background: -o-linear-gradient(#00111e 30%, #033d5e);
+  background: linear-gradient(#00111e 30%, #033d5e);
+  overflow: hidden;
 }
 
 .hero-unit {
@@ -36,5 +42,5 @@ body {
 
 
 canvas {
-    border:1px solid red;
+    /*border:1px solid red;*/
 }
