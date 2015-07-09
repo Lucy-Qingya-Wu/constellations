@@ -5,9 +5,17 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
-var stars = {"coordinates": [
-  [102.0, 0.0], [103.0, 1.0], [104.0, 0.0], [105.0, 1.0]
-]};
+//var stars = {"coordinates": [
+//  "constellationname": "Draco",
+//  [102.0, 0.0, "yellow"],
+//  [103.0, 1.0, "red"],
+//  [104.0, 0.0, "pink"],
+//  [105.0, 1.0, "cyan"]
+//]};
+
+//each json entry will include
+//star coordinates + colors of each star + constellation name + number of points + inner and outter radius
+
 
 
 function drawStar(cx, cy, spikes, outerRadius, innerRadius, color) {
@@ -47,3 +55,8 @@ drawStar(400, 200, 6, 130, 15, 'blue');
 drawStar(500, 200, 5, 30, 15, 'green');
 drawStar(600, 200, 6, 30, 15, 'purple');
 drawStar(800, 200, 6, 30, 15, 'pink')
+
+for (i = 0; i < spikes; i++) {
+  //go through JSON object
+  drawStar(400, 200, 6, 30, 15, 'yellow');
+}
