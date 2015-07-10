@@ -35,6 +35,29 @@
 
     </div> -->
 
+    <p id="name"></p>
+
+    <script>
+    var employees = [
+                      {
+                      "firstName":"A",
+                      "lastName":"AA"
+                      }, 
+                      {
+                      "firstName":"B",
+                      "lastName":"BB"
+                      },
+                      {
+                      "firstName":"C",
+                      "lastName":"CC"
+                      }
+                    ];
+
+
+    document.getElementById("name").innerHTML =
+    employees[0].firstName + " " + employees[0].lastName;
+    </script>
+    
     <canvas id="canvas" width="2000" height="1000"></canvas>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
