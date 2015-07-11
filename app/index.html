@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>EXCITE</title>
+    <title>Constellations</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -19,43 +19,25 @@
     <!-- endbuild -->
 
   </head>
-  <body background="sky.jpg">
+  <body>
+    
+  <h1>Jill's constellations!!</h1>
+  <section>My name is Jill and I like stuff.</section>
 
-    <!--[if lt IE 10]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <!-- <div class="hero-unit">
-      <h1>EXITE Constellations</h1>
-      <p>Please input your stars coordinates below:</p>
-      <div
-        class="coordinates-input">x-coordinate<input type="text" class="coordinate">y-coordinate<input
-        type="text"
-        class="coordinate"><button>Add</button></div>
-
-    </div> -->
 
     <p id="name"></p>
 
     <script>
-    var employees = [
+    var star = [
                       {
-                      "firstName":"A",
-                      "lastName":"AA"
-                      }, 
-                      {
-                      "firstName":"B",
-                      "lastName":"BB"
-                      },
-                      {
-                      "firstName":"C",
-                      "lastName":"CC"
-                      }
-                    ];
-
-
-    document.getElementById("name").innerHTML =
-    employees[0].firstName + " " + employees[0].lastName;
+                      "x-coordinate":"100",
+                      "y-coordinate":"100",
+                      "color":"white",
+                      "numPoints":"5",
+                      "innerRadius":"10",
+                      "outerRadius":"20" }
+                      
+                ]; 
     </script>
     
     <canvas id="canvas" width="2000" height="1000"></canvas>
