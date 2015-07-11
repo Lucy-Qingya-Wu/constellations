@@ -1,7 +1,23 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+
 function drawStar(cx, cy, spikes, outerRadius, innerRadius, color) {
+
+    if (cx > 1550){
+        alert("x_coordinate is better to be less than 1550");
+        console.log(cx, cy, spikes, outerRadius, innerRadius, color);
+    }
+
+    if (cy > 600){
+        alert("y_coordinate is better to be less than 600");
+        console.log(cx, cy, spikes, outerRadius, innerRadius, color);
+    }
+
+    cy = 600 - cy;
 
     var rot = Math.PI / 2 * 3;
     var x = cx;
@@ -27,153 +43,156 @@ function drawStar(cx, cy, spikes, outerRadius, innerRadius, color) {
     ctx.lineTo(cx, cy - outerRadius)
     ctx.closePath();
     ctx.lineWidth=5;
-    ctx.strokeStyle='yellow';
+    ctx.strokeStyle=color;
     ctx.stroke();
     ctx.fillStyle=color;
     ctx.fill();
-
 }
 
-var star1 = [
+var constellation = { "name" : "Draco - dragon",
+                      "stars":[
+                      {
+                      "x_coordinate":32,
+                      "y_coordinate":50,
+                      "color":"yellow",
+                      "numPoints":5,
+                      "innerRadius":10,
+                      "outerRadius":20 },
+
+                      {
+                      "x_coordinate":136,
+                      "y_coordinate":120,
+                      "color":"yellow",
+                      "numPoints":5,
+                      "innerRadius":10,
+                      "outerRadius":20 },
+
+                      {
+                      "x_coordinate":140,
+                      "y_coordinate":20,
+                      "color":"yellow",
+                      "numPoints":5,
+                      "innerRadius":10,
+                      "outerRadius":20 },
+
+                      {
+                      "x_coordinate":240,
+                      "y_coordinate":50,
+                      "color":"yellow",
+                      "numPoints":5,
+                      "innerRadius":10,
+                      "outerRadius":20 },
+
+                      {
+                      "x_coordinate":136,
+                      "y_coordinate":450,
+                      "color":"yellow",
+                      "numPoints":5,
+                      "innerRadius":10,
+                      "outerRadius":20 },
+
+                      {
+                      "x_coordinate":150,
+                      "y_coordinate":570,
+                      "color":"yellow",
+                      "numPoints":6,
+                      "innerRadius":10,
+                      "outerRadius":20 },
+
                       {
                       "x_coordinate":300,
-                      "y_coordinate":100,
-                      "color":"white",
+                      "y_coordinate":520,
+                      "color":"yellow",
                       "numPoints":5,
-                      "innerRadius":1,
-                      "outerRadius":2 },
+                      "innerRadius":10,
+                      "outerRadius":20 },
 
                       {
                       "x_coordinate":400,
+                      "y_coordinate":400,
+                      "color":"yellow",
+                      "numPoints":5,
+                      "innerRadius":10,
+                      "outerRadius":20 },
+
+                      {
+                      "x_coordinate":500,
+                      "y_coordinate":350,
+                      "color":"yellow",
+                      "numPoints":5,
+                      "innerRadius":10,
+                      "outerRadius":20 },
+
+                      {
+                      "x_coordinate":600,
+                      "y_coordinate":300,
+                      "color":"yellow",
+                      "numPoints":5,
+                      "innerRadius":10,
+                      "outerRadius":20 },
+
+                      {
+                      "x_coordinate":700,
+                      "y_coordinate":250,
+                      "color":"yellow",
+                      "numPoints":5,
+                      "innerRadius":10,
+                      "outerRadius":20 },
+
+                      {
+                      "x_coordinate":800,
                       "y_coordinate":200,
-                      "color":"red",
-                      "numPoints":6,
-                      "innerRadius":1,
-                      "outerRadius":2 }
+                      "color":"yellow",
+                      "numPoints":5,
+                      "innerRadius":10,
+                      "outerRadius":20 },
 
-                      // {
-                      // "x_coordinate":10,
-                      // "y_coordinate":6,
-                      // "color":"blue",
-                      // "numPoints":6,
-                      // "innerRadius":1,
-                      // "outerRadius":2 },
+                      {
+                      "x_coordinate":900,
+                      "y_coordinate":250,
+                      "color":"yellow",
+                      "numPoints":5,
+                      "innerRadius":10,
+                      "outerRadius":20 },
 
-                      // {
-                      // "x_coordinate":6,
-                      // "y_coordinate":10,
-                      // "color":"green",
-                      // "numPoints":6,
-                      // "innerRadius":1,
-                      // "outerRadius":2 },
+                      {
+                      "x_coordinate":1000,
+                      "y_coordinate":300,
+                      "color":"yellow",
+                      "numPoints":5,
+                      "innerRadius":10,
+                      "outerRadius":20 },
 
-                      // {
-                      // "x_coordinate":5,
-                      // "y_coordinate":31,
-                      // "color":"yellow",
-                      // "numPoints":6,
-                      // "innerRadius":1,
-                      // "outerRadius":2 },,
+                      {
+                      "x_coordinate":1100,
+                      "y_coordinate":400,
+                      "color":"yellow",
+                      "numPoints":5,
+                      "innerRadius":10,
+                      "outerRadius":20 },
 
-                      // {
-                      // "x_coordinate":6,
-                      // "y_coordinate":33,
-                      // "color":"yellow",
-                      // "numPoints":6,
-                      // "innerRadius":1,
-                      // "outerRadius":2 },
+                      {
+                      "x_coordinate":1200,
+                      "y_coordinate":500,
+                      "color":"yellow",
+                      "numPoints":5,
+                      "innerRadius":10,
+                      "outerRadius":20 }
+                      ]
 
-                      // {
-                      // "x_coordinate":11,
-                      // "y_coordinate":37,
-                      // "color":"yellow",
-                      // "numPoints":6,
-                      // "innerRadius":1,
-                      // "outerRadius":2 },
+                };
 
-                      // {
-                      // "x_coordinate":14,
-                      // "y_coordinate":31,
-                      // "color":"yellow",
-                      // "numPoints":6,
-                      // "innerRadius":1,
-                      // "outerRadius":2 },
+document.getElementById("name").innerHTML = constellation["name"];
 
-                      // {
-                      // "x_coordinate":17,
-                      // "y_coordinate":24,
-                      // "color":"yellow",
-                      // "numPoints":6,
-                      // "innerRadius":1,
-                      // "outerRadius":2 },
 
-                      // {
-                      // "x_coordinate":19,
-                      // "y_coordinate":19,
-                      // "color":"yellow",
-                      // "numPoints":6,
-                      // "innerRadius":1,
-                      // "outerRadius":2 },
+for (var ind = 0; ind < constellation["stars"].length; ind++) {
 
-                      // {
-                      // "x_coordinate":25,
-                      // "y_coordinate":12,
-                      // "color":"yellow",
-                      // "numPoints":6,
-                      // "innerRadius":1,
-                      // "outerRadius":2 },
-
-                      // {
-                      // "x_coordinate":29,
-                      // "y_coordinate":7,
-                      // "color":"yellow",
-                      // "numPoints":6,
-                      // "innerRadius":1,
-                      // "outerRadius":2 },
-
-                      // {
-                      // "x_coordinate":36,
-                      // "y_coordinate":8,
-                      // "color":"yellow",
-                      // "numPoints":6,
-                      // "innerRadius":1,
-                      // "outerRadius":2 },
-
-                      // {
-                      // "x_coordinate":47,
-                      // "y_coordinate":20,
-                      // "color":"yellow",
-                      // "numPoints":6,
-                      // "innerRadius":1,
-                      // "outerRadius":2 },
-
-                      // {
-                      // "x_coordinate":53,
-                      // "y_coordinate":35,
-                      // "color":"yellow",
-                      // "numPoints":6,
-                      // "innerRadius":1,
-                      // "outerRadius":2 },
-
-                      // {
-                      // "x_coordinate":57,
-                      // "y_coordinate":41,
-                      // "color":"yellow",
-                      // "numPoints":6,
-                      // "innerRadius":1,
-                      // "outerRadius":2 },
-
-                      
-                ];
-
-for (var ind = 0; ind < star1.length; ind++) {
-  //go through JSON object
-  console.log(star1[ind]);
-  console.log(ind);
-  drawStar(star1[ind]["x_coordinate"], 
-         star1[ind]["y_coordinate"],
-         star1[ind]["numPoints"], 
-         star1[ind]["outerRadius"],
-         star1[ind]["innerRadius"], 
-         star1[ind]["color"]);
+  drawStar(constellation["stars"][ind]["x_coordinate"], 
+           constellation["stars"][ind]["y_coordinate"],
+           constellation["stars"][ind]["numPoints"], 
+           constellation["stars"][ind]["outerRadius"],
+           constellation["stars"][ind]["innerRadius"], 
+           constellation["stars"][ind]["color"]);
 }
+
+
