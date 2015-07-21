@@ -3,14 +3,16 @@ EXITE camp project
 
 Instructions
 
-1. Input (x,y) coordinates
+1. Map their constellation to coordinates
 
-2. Edit styles of the stars (in json)
+2. Input (x,y) coordinates
 
-3. Add a header with style ="blah"
+3. Edit styles of the stars (in json)
 
-4. Add a description
+4. Add a header with style ="blah"
 
-5. Edit the CSS of the header, background, paragraph, stars
+5. Add a description
 
-6. Find some information about your constellation and add it to the description.
+6. Edit the CSS of the header, background, paragraph, stars
+
+7. Find some information about your constellation and add it to the description.
