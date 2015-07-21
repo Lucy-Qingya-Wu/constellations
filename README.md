@@ -9,5 +9,5 @@ Instructions
 3. Add a header with style ="blah"
 
 4. Add a description
-
 5. Edit the CSS of the header, background, paragraph
+6. Use Animate.CSS
