@@ -10,6 +10,6 @@ Instructions
 
 4. Add a description
 
-5. Edit the CSS of the header, background, paragraph
+5. Edit the CSS of the header, background, paragraph, stars
 
 6. Use Animate.CSS
