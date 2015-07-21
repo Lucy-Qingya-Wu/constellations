@@ -13,4 +13,4 @@ Instructions
 
 5. Edit the CSS of the header, background, paragraph, stars
 
-6. Use Animate.CSS
+6. Find some information about your constellation and add it to the description.
