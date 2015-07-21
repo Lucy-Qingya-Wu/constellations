@@ -2,6 +2,7 @@
 EXITE camp project
 
 Instructions
+
 1. Input (x,y) coordinates
 
 2. Edit styles of the stars (in json)
