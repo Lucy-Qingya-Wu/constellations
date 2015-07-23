@@ -2,12 +2,6 @@ body {
   background-color: #000050;
 }
 
-
-#name {
-  color: white;
-  border: 1px solid orange;
-}
-
 #header {
   color: white;
   text-decoration: blink;
@@ -23,4 +17,9 @@ body {
 p {
   text-align: center;
   font-size: 14px;
+}
+
+footer {
+  color: white;
+  border: 1px solid orange;
 }
