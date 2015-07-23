@@ -2,6 +2,7 @@
 EXITE camp project
 
 Instructions
+Slide deck: https://docs.google.com/presentation/d/1ymhhY5mpqLskCNswFYrU7pYcTy0U4Ead27EA-xB2GLA/edit?usp=sharing
 
 1. Map their constellation to coordinates
 
