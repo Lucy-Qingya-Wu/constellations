@@ -3,7 +3,7 @@ var ctx = canvas.getContext("2d");
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-
+console.log('in here');
 
 function drawStar(cx, cy, spikes, outerRadius, innerRadius, color) {
 

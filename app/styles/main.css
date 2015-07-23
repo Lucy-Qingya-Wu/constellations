@@ -1,13 +1,18 @@
 body {
   background-color: #000050;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
 }
 
-/*<<<<<<< Updated upstream
-#header {
-  color: white;
+h1 {
+ 
   text-decoration: blink;
   font-weight: bold;
+  font-family: 'Slabo 27px', serif;
+  font-size: 4em;
+  text-align: center;
 }
+
 
 .star {
   -webkit-box-shadow: 0px 0px 76px 12px rgba(224,224,0,1);
@@ -18,18 +23,12 @@ body {
 p {
   text-align: center;
   font-size: 14px;
+ 
 }
 
 footer {
   color: white;
   border: 1px solid orange;
 }
-=======*/
-#name {
-  color: white;
-}
 
-#Description {
-  color: white;
-}
 
