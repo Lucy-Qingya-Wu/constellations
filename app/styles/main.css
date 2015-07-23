@@ -2,6 +2,7 @@ body {
   background-color: #000050;
 }
 
+/*<<<<<<< Updated upstream
 #header {
   color: white;
   text-decoration: blink;
@@ -23,3 +24,12 @@ footer {
   color: white;
   border: 1px solid orange;
 }
+=======*/
+#name {
+  color: white;
+}
+
+#Description {
+  color: white;
+}
+
