@@ -2,24 +2,14 @@ $(function(){
   var canvas = document.getElementById("canvas");
   var ctx = canvas.getContext("2d");
 
-  canvas.width = 1570;
+  canvas.width = 1580;
 
-  canvas.height = 600;
+  canvas.height = 560;
 
 
   function drawStar(cx, cy, spikes, outerRadius, innerRadius, color) {
 
-      if (cx > 1550){
-          alert("x_coordinate is better to be less than 1550");
-          console.log(cx, cy, spikes, outerRadius, innerRadius, color);
-      }
-
-      if (cy > 600){
-          alert("y_coordinate is better to be less than 600");
-          console.log(cx, cy, spikes, outerRadius, innerRadius, color);
-      }
-
-      cy = 600 - cy;
+      cy = 580 - cy;
 
       var rot = Math.PI / 2 * 3;
       var x = cx;
@@ -55,19 +45,27 @@ $(function(){
   var constellation = stars;
   document.getElementById("name").innerHTML = constellation["name"];
 
-
+  var factor1, factor2;
   for (var ind = 0; ind < constellation["stars"].length; ind++) {
-
-    
-
-    drawStar(constellation["stars"][ind]["x_coordinate"]*23-20, 
-             constellation["stars"][ind]["y_coordinate"]*8 + 20,
+    if (constellation["name"] == "Ursa_major"){
+      factor1 = 23;
+    }else{
+      factor1 = 27;
+    };
+    if (constellation["name"] == "Orion - archor"){
+      factor2 = 20;
+    }else{
+      factor2 = 120;
+    };
+    drawStar(constellation["stars"][ind]["x_coordinate"]*factor1, 
+             constellation["stars"][ind]["y_coordinate"]*8 + factor2,
              constellation["stars"][ind]["numPoints"], 
-             constellation["stars"][ind]["outerRadius"],
-             constellation["stars"][ind]["innerRadius"], 
+             10,
+             5, 
              constellation["stars"][ind]["color"]);
 
   }  
+  console.log(constellation["stars"].length);
 
 });
 
