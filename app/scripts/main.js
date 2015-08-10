@@ -47,7 +47,7 @@ $(function(){
 
   var factor1, factor2;
   for (var ind = 0; ind < constellation["stars"].length; ind++) {
-    if (constellation["name"] == "Ursa_major"){
+    if (constellation["name"] == "Ursa Major - bear"){
       factor1 = 23;
     }else{
       factor1 = 27;

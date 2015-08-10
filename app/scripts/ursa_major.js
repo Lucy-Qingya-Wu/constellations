@@ -1,4 +1,4 @@
-stars = {            "name" : "Ursa_major",
+stars = {            "name" : "Ursa Major - bear",
                       "stars":[
                       {
                       "x_coordinate":2,
