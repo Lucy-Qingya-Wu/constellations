@@ -1,0 +1,35 @@
+/* styling for the body of your html page*/
+body {
+  background-color: black;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+/* styling for your header */
+h1 { 
+  color: lime;
+  text-align: center;
+  font-size: 24pt;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* styling for paragraphs */
+p {
+  text-align: center;
+  font-size: 14px;
+  color: white; /* font colour */
+}
+
+/* styling for your footer */
+footer {
+  background-color: green;
+  font-size: 12pt;
+	border-top: 1px solid white;
+  text-align: left;
+}
+
+.myparagraph {
+  color: pink;
+  text-align: left;
+}
+
