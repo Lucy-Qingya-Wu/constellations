@@ -1,7 +1,7 @@
 # constellations
 EXITE camp project
 
-Contributor instructions: 
+## Contributor instructions: 
 
 1. Clone the repo
 2. Open the index.html file in the browser.
@@ -10,7 +10,7 @@ Contributor instructions:
 
 Slide deck: https://docs.google.com/presentation/d/1ymhhY5mpqLskCNswFYrU7pYcTy0U4Ead27EA-xB2GLA/edit?usp=sharing
 
-Student Instructions:
+## Student Instructions:
 
 1. Map their constellation to coordinates
 2. Input (x,y) coordinates
