@@ -1,0 +1,37 @@
+<body>
+<head>
+</head>
+  <body>
+      <div ng-controller="myController">
+            <form>
+            <label>X Coordinate:</label>
+            <input type="number" id="x_coordinate"/></br>
+            <label>Y Coordinate:</label>
+            <input type="number" id="y_coordinate"></br>
+            <label>Colour:</label>
+            <input type="text" id="colour"></br>
+            <label>Point number:</label>
+            <input type="number" id="numPoints"></br>
+            </form></br>
+            <button onclick="addStar()"> Add Star </button>
+            <p>JSON:</p>
+            <p id="jsonObject"></p>
+      </div> 
+  </body>
+<script type="text/javascript">
+    var array = [];
+
+    function addStar() {
+        var x = document.getElementById("x_coordinate").value;
+        var y = document.getElementById("y_coordinate").value;
+        var colour = document.getElementById("colour").value;
+        var num = document.getElementById("numPoints").value;
+
+        array.push("{'x_coordinate': " + x + ", 'y_coordinate': " + y + ", 'colour': '" + colour + "' , 'numPoints':" + num + "}");
+        console.log(array);
+        var jsonForm = "{'stars':[" + array + "]}";
+        document.getElementById("jsonObject").innerHTML = jsonForm;
+    }
+</script>
+
+</body>
