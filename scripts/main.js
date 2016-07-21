@@ -4,7 +4,7 @@
 
   canvas.width = 1580;
 
-  canvas.height = 560;
+  canvas.height = 580;
 
 
   function drawStar(cx, cy, spikes, outerRadius, innerRadius, color) {
@@ -47,18 +47,63 @@
 
   var factor1, factor2;
   for (var ind = 0; ind < constellation["stars"].length; ind++) {
+    if (constellation["name"] == "Draco - dragon"){
+      factor1 = 18;
+      factor2 = 240;
+      factor3 = 11;
+      factor4 = 30;
+    }
+    if (constellation["name"] == "Orion - archor"){
+      factor1 = 12;
+      factor2 = 500;
+      factor3 = 8;
+      factor4 = 12;
+    }
+    if (constellation["name"] == "Pegasus - winged horse"){
+      factor1 = 14;
+      factor2 = 360;
+      factor3 = 12;
+      factor4 = 10;
+    }
+    if (constellation["name"] == "Scorpius - scorpion"){
+      factor1 = 24;
+      factor2 = 100;
+      factor3 = 10;
+      factor4 = 20;
+    }
     if (constellation["name"] == "Ursa Major - bear"){
-      factor1 = 23;
+      factor1 = 18;
+      factor2 = 120;
+      factor3 = 11;
+      factor4 = 0;
+    }
+
+
+
+    /*if (constellation["name"] == "Ursa Major - bear"){
+      factor1 = 18;
     }else{
-      factor1 = 27;
+      factor1 = 12;
     };
     if (constellation["name"] == "Orion - archor"){
-      factor2 = 20;
+      factor2 = 500;
     }else{
-      factor2 = 120;
+      factor2 = 50;
     };
-    drawStar(constellation["stars"][ind]["x_coordinate"]*factor1, 
-             constellation["stars"][ind]["y_coordinate"]*8 + factor2,
+    if (constellation["name"] == "Orion - archor"){
+      factor3 = 8;
+    }else{
+      factor3= 12;
+    };
+    if (constellation["name"] == "Ursa Major - bear"){
+      factor4 = -50;
+    }else{
+      factor4 = 12;
+    };*/
+
+
+    drawStar(constellation["stars"][ind]["x_coordinate"]*factor1 + factor2, 
+             constellation["stars"][ind]["y_coordinate"]*factor3 + factor4,
              constellation["stars"][ind]["numPoints"], 
              10,
              5, 
