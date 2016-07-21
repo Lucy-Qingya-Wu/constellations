@@ -28,9 +28,9 @@
         var colour = document.getElementById("colour").value;
         var num = document.getElementById("numPoints").value;
 
-        array.push("{'x_coordinate': " + x + ", 'y_coordinate': " + y + ", 'colour': '" + colour + "' , 'numPoints':" + num + "}");
+        array.push("{\"x_coordinate\": " + x + ", \"y_coordinate\": " + y + ", \"colour\": \"" + colour + "\" , \"numPoints\":" + num + "}");
         console.log(array);
-        var jsonForm = "{'stars':[" + array + "]}";
+        var jsonForm = "{\"stars\":[" + array + "]}";
         document.getElementById("jsonObject").innerHTML = jsonForm;
     }
 </script>
