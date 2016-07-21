@@ -79,29 +79,6 @@
     }
 
 
-
-    /*if (constellation["name"] == "Ursa Major - bear"){
-      factor1 = 18;
-    }else{
-      factor1 = 12;
-    };
-    if (constellation["name"] == "Orion - archor"){
-      factor2 = 500;
-    }else{
-      factor2 = 50;
-    };
-    if (constellation["name"] == "Orion - archor"){
-      factor3 = 8;
-    }else{
-      factor3= 12;
-    };
-    if (constellation["name"] == "Ursa Major - bear"){
-      factor4 = -50;
-    }else{
-      factor4 = 12;
-    };*/
-
-
     drawStar(constellation["stars"][ind]["x_coordinate"]*factor1 + factor2, 
              constellation["stars"][ind]["y_coordinate"]*factor3 + factor4,
              constellation["stars"][ind]["numPoints"], 
