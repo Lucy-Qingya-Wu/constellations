@@ -16,11 +16,16 @@
             </form></br>
             <button onclick="addStar()"> Add Star </button>
             <h2>JSON:</h2>
+            <!-- <p id="jsonObject"></p> -->
+            <p>{"stars":[</p>
             <p id="jsonObject"></p>
+            <p>]}</p>
       </div> 
   </body>
 <script type="text/javascript">
     var array = [];
+    var n = 0;
+    var firstFlag = 0;
 
     function addStar() {
         var x = document.getElementById("x_coordinate").value;
@@ -28,10 +33,36 @@
         var colour = document.getElementById("colour").value;
         var num = document.getElementById("numPoints").value;
 
+        /*var obj = {x_coordinate: x, y_coordinate: y, colour: colour, numPoints: num};
+        console.log(obj);
+        array.push(obj);
+        console.log(array);*/
         array.push("{\"x_coordinate\": " + x + ", \"y_coordinate\": " + y + ", \"colour\": \"" + colour + "\" , \"numPoints\":" + num + "}");
         console.log(array);
-        var jsonForm = "{\"stars\":[" + array + "]}";
-        document.getElementById("jsonObject").innerHTML = jsonForm;
+        // var jsonForm = "{\"stars\":[" + array + " \r\n ]}";
+        // document.getElementById("jsonObject").innerHTML = jsonForm;
+
+        /*for(i = 0 ; i < n ; i++){
+            console.log(array[i]);
+            var jsonForm = array[i];
+            document.getElementById("jsonObject").innerHTML = "," +jsonForm;
+            console.log(n);
+            console.log(i);
+        }*/
+        if(firstFlag == 0){
+            var node = document.createElement("p");                 
+            var textnode = document.createTextNode(array[n]);    
+            node.appendChild(textnode);  
+            document.getElementById("jsonObject").appendChild(node); 
+        }
+        else{
+            var node = document.createElement("p");                 
+            var textnode = document.createTextNode("," + array[n]);    
+            node.appendChild(textnode);  
+            document.getElementById("jsonObject").appendChild(node);   
+        }
+        n++;
+        firstFlag = 1;
     }
 </script>
 
