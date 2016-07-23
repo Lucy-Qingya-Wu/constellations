@@ -3,81 +3,51 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
   <body>
-      <div>
+      <div class="forms">
             <form>
-                <label>Constellation Name:</label>
-                <select id="constellation-name">
-                  <option value="Draco">Draco</option>
-                  <option value="Orion">Orion</option>
-                  <option value="Pegasus">Pegasus</option>
-                  <option value="Scorpius">Scorpius</option>
-                  <option value="Ursa Major">Ursa Major</option>
-                </select>
-            </form>
+                <h4>To add a star, enter its attributes and click "Add Star!"</h4>
+                    <label>Constellation Name:</label>
+                    <select id="constellation-name">
+                      <option value="Draco">Draco</option>
+                      <option value="Orion">Orion</option>
+                      <option value="Pegasus">Pegasus</option>
+                      <option value="Scorpius">Scorpius</option>
+                      <option value="Ursa Major">Ursa Major</option>
+                    </select>
 
-            <form>
-            <label>X Coordinate:</label>
-            <input type="number" id="x_coordinate"/></br>
-            <label>Y Coordinate:</label>
-            <input type="number" id="y_coordinate"></br>
-            <label>color:</label>
-            <input type="text" id="color"></br>
-            <label>Number of spikes on each star:</label>
-            <input type="number" id="number_of_spikes"></br>
-            </form></br>
-            <button onclick="addStar()"> Add Star </button>
+                    <label>X Coordinate:</label>
+                    <input type="number" id="x_coordinate"/></br>
+                    <label>Y Coordinate:</label>
+                    <input type="number" id="y_coordinate"></br>
+                    <label>color:</label>
+                    <input type="text" id="color"></br>
+                    <label>Number of spikes on each star:</label>
+                    <input type="number" id="number_of_spikes"></br>
+                </form></br>
+                <button onclick="addStar()"> Add Star </button>
+            </div>
+
+            <div class="forms" id="delete-form">
+                <form>
+                    <h4>To delete a star, enter the ID here, then click "Delete Star!"</h4>
+                    <label>star ID:</label></br>
+                    <input type="text" id="star-to-delete"></br>
+                </form>
+                <button id="delete-button" onclick="deleteStar()"> Delete Star </button>
+            </div>
+
             <h2>Copy and paste the text in the box into stars.js!</h2>
 
             <div id="json-box">
                 <div id="json-text">
-                    <p>constellation = {</p>
+                    <p>constellation = {</p> 
+                    <p>"name" :"<ph id="star-name">Orion</ph>",</p>
+                    <p>"stars":[</p> 
                     <p id="jsonObject"></p>
                     <p>]};</p>
                 </div>
             </div>
       </div> 
   </body>
-<script type="text/javascript">
-    var array = [];
-    var n = 0;
-    var firstFlag = 0;
-
-    function addStar() {
-        var name = document.getElementById("constellation-name").value;
-        var x = document.getElementById("x_coordinate").value;
-        var y = document.getElementById("y_coordinate").value;
-        var color = document.getElementById("color").value;
-        var num = document.getElementById("number_of_spikes").value;
-
-        array.push("{\"x_coordinate\": " + x + ", \"y_coordinate\": " + y + ", \"color\": \"" + color + "\" , \"number_of_spikes\":" + num + "}");
-        console.log(array);
-
-        if(firstFlag == 0){
-            var node = document.createElement("p");
-            var textnode = document.createTextNode("\"name\" :" + "\""+ name + "\"" + ",");   
-            node.appendChild(textnode);  
-            document.getElementById("jsonObject").appendChild(node);
-
-            var node = document.createElement("p");                 
-            var textnode = document.createTextNode("\"stars\":[");    
-            node.appendChild(textnode);  
-            document.getElementById("jsonObject").appendChild(node);
-             
-
-            var node = document.createElement("p");                 
-            var textnode = document.createTextNode(array[n]);    
-            node.appendChild(textnode);  
-            document.getElementById("jsonObject").appendChild(node); 
-        }
-        else{
-            var node = document.createElement("p");                 
-            var textnode = document.createTextNode("," + array[n]);    
-            node.appendChild(textnode);  
-            document.getElementById("jsonObject").appendChild(node);   
-        }
-        n++;
-        firstFlag = 1;
-    }
-</script>
-
+<script type="text/javascript" src="jsonify.js"></script>
 </body>
