@@ -42,36 +42,36 @@
   }
 
 
-  var constellation = stars;
-  document.getElementById("name").innerHTML = constellation["name"];
+  var myConstellation = constellation;
+  document.getElementById("name").innerHTML = myConstellation["name"];
 
   var factor1, factor2;
-  for (var ind = 0; ind < constellation["stars"].length; ind++) {
-    if (constellation["name"] == "Draco - dragon"){
+  for (var ind = 0; ind < myConstellation["stars"].length; ind++) {
+    if (myConstellation["name"] == "Draco"){
       factor1 = 18;
       factor2 = 240;
       factor3 = 11;
       factor4 = 30;
     }
-    if (constellation["name"] == "Orion - archor"){
+    if (myConstellation["name"] == "Orion"){
       factor1 = 12;
       factor2 = 500;
       factor3 = 8;
       factor4 = 12;
     }
-    if (constellation["name"] == "Pegasus - winged horse"){
+    if (myConstellation["name"] == "Pegasus"){
       factor1 = 14;
       factor2 = 360;
       factor3 = 12;
       factor4 = 10;
     }
-    if (constellation["name"] == "Scorpius - scorpion"){
+    if (myConstellation["name"] == "Scorpius"){
       factor1 = 24;
       factor2 = 100;
       factor3 = 10;
       factor4 = 20;
     }
-    if (constellation["name"] == "Ursa Major - bear"){
+    if (myConstellation["name"] == "Ursa Major"){
       factor1 = 18;
       factor2 = 120;
       factor3 = 11;
@@ -79,15 +79,15 @@
     }
 
 
-    drawStar(constellation["stars"][ind]["x_coordinate"]*factor1 + factor2, 
-             constellation["stars"][ind]["y_coordinate"]*factor3 + factor4,
-             constellation["stars"][ind]["numPoints"], 
+    drawStar(myConstellation["stars"][ind]["x_coordinate"]*factor1 + factor2, 
+             myConstellation["stars"][ind]["y_coordinate"]*factor3 + factor4,
+             myConstellation["stars"][ind]["number_of_spikes"], 
              10,
              5, 
-             constellation["stars"][ind]["color"]);
+             myConstellation["stars"][ind]["color"]);
 
   }  
-  console.log(constellation["stars"].length);
+  console.log(myConstellation["stars"].length);
 
 })();
 

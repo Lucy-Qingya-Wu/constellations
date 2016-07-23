@@ -3,23 +3,38 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
   <body>
-      <div ng-controller="myController">
+      <div>
+            <form>
+                <label>Constellation Name:</label>
+                <select id="constellation-name">
+                  <option value="Draco">Draco</option>
+                  <option value="Orion">Orion</option>
+                  <option value="Pegasus">Pegasus</option>
+                  <option value="Scorpius">Scorpius</option>
+                  <option value="Ursa Major">Ursa Major</option>
+                </select>
+            </form>
+
             <form>
             <label>X Coordinate:</label>
             <input type="number" id="x_coordinate"/></br>
             <label>Y Coordinate:</label>
             <input type="number" id="y_coordinate"></br>
-            <label>Colour:</label>
-            <input type="text" id="colour"></br>
-            <label>Point number:</label>
-            <input type="number" id="numPoints"></br>
+            <label>color:</label>
+            <input type="text" id="color"></br>
+            <label>Number of spikes on each star:</label>
+            <input type="number" id="number_of_spikes"></br>
             </form></br>
             <button onclick="addStar()"> Add Star </button>
-            <h2>JSON:</h2>
-            <!-- <p id="jsonObject"></p> -->
-            <p>{"stars":[</p>
-            <p id="jsonObject"></p>
-            <p>]}</p>
+            <h2>Copy and paste the text in the box into stars.js!</h2>
+
+            <div id="json-box">
+                <div id="json-text">
+                    <p>constellation = {</p>
+                    <p id="jsonObject"></p>
+                    <p>]};</p>
+                </div>
+            </div>
       </div> 
   </body>
 <script type="text/javascript">
@@ -28,28 +43,27 @@
     var firstFlag = 0;
 
     function addStar() {
+        var name = document.getElementById("constellation-name").value;
         var x = document.getElementById("x_coordinate").value;
         var y = document.getElementById("y_coordinate").value;
-        var colour = document.getElementById("colour").value;
-        var num = document.getElementById("numPoints").value;
+        var color = document.getElementById("color").value;
+        var num = document.getElementById("number_of_spikes").value;
 
-        /*var obj = {x_coordinate: x, y_coordinate: y, colour: colour, numPoints: num};
-        console.log(obj);
-        array.push(obj);
-        console.log(array);*/
-        array.push("{\"x_coordinate\": " + x + ", \"y_coordinate\": " + y + ", \"colour\": \"" + colour + "\" , \"numPoints\":" + num + "}");
+        array.push("{\"x_coordinate\": " + x + ", \"y_coordinate\": " + y + ", \"color\": \"" + color + "\" , \"number_of_spikes\":" + num + "}");
         console.log(array);
-        // var jsonForm = "{\"stars\":[" + array + " \r\n ]}";
-        // document.getElementById("jsonObject").innerHTML = jsonForm;
 
-        /*for(i = 0 ; i < n ; i++){
-            console.log(array[i]);
-            var jsonForm = array[i];
-            document.getElementById("jsonObject").innerHTML = "," +jsonForm;
-            console.log(n);
-            console.log(i);
-        }*/
         if(firstFlag == 0){
+            var node = document.createElement("p");
+            var textnode = document.createTextNode("\"name\" :" + "\""+ name + "\"" + ",");   
+            node.appendChild(textnode);  
+            document.getElementById("jsonObject").appendChild(node);
+
+            var node = document.createElement("p");                 
+            var textnode = document.createTextNode("\"stars\":[");    
+            node.appendChild(textnode);  
+            document.getElementById("jsonObject").appendChild(node);
+             
+
             var node = document.createElement("p");                 
             var textnode = document.createTextNode(array[n]);    
             node.appendChild(textnode);  
