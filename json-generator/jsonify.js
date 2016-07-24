@@ -68,6 +68,11 @@
         firstFlag = 1;
     }
 
+    function updateArray(id, x, y, spikes){
+
+    }
+
+
     function deleteStar() {
         var deleteID = document.getElementById("star-to-delete").value;
         var bar = document.getElementById(deleteID);
@@ -83,6 +88,11 @@
         if(foo > -1){
             array.splice( foo, 1 );
             console.log(array);
+        }
+
+        for( i = 0 ; i < array.length ; i++){
+            array[i].id = 'star' + i;
+            console.log(array[i].id);
         }
 
         array.toString();
