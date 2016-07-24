@@ -1,6 +1,6 @@
     var array = [];
     var n = 0;
-    var firstFlag = 0;
+
 
     function addStar() {
         var name = document.getElementById("constellation-name").value;
@@ -13,10 +13,6 @@
         var y = parseInt(yString);
         var spikes = parseInt(spikesString);
 
-
-
-        //array.push("<br>" + "{\"x_coordinate\": " + x + ", \"y_coordinate\": " + y + ", \"color\": \"" + color + "\" , \"number_of_spikes\":" + num + ", \"id\": \"star" + (n+1) + "\"" + "}");
-
         var temp = {};
         temp['id'] = 'star' + n;
         temp['x_coordinate'] = x;
@@ -27,66 +23,23 @@
         console.log(array);
         console.log(array[n])
 
-        //JSON.stringify(array);
-        //console.log( "after json stringify: " + array);
-
-        /*if(firstFlag == 0){
-            var node = document.createElement("p");
-            var textnode = document.createTextNode("\"name\" :" + "\""+ name + "\"" + ",");   
-            node.appendChild(textnode);  
-            document.getElementById("jsonObject").appendChild(node);
-
-            var node = document.createElement("p");                 
-            var textnode = document.createTextNode("\"stars\":[");    
-            node.appendChild(textnode);  
-            document.getElementById("jsonObject").appendChild(node);
-             
-
-            var node = document.createElement("p");                 
-            var textnode = document.createTextNode(array[n]);    
-            node.appendChild(textnode);
-            node.setAttribute("id", "star" + (n+1) );  
-            document.getElementById("jsonObject").appendChild(node); 
-        }
-        else{
-            var node = document.createElement("p");                 
-            var textnode = document.createTextNode("," + array[n]);    
-            node.appendChild(textnode);  
-            node.setAttribute("id", "star" + (n+1) );  
-            document.getElementById("jsonObject").appendChild(node);   
-        }*/
-
-            document.getElementById('star-name').innerHTML = name;
-            //document.getElementById('jsonObject').innerHTML = array;    
-
-            //for loop to display each star object
-            //var tempStar = "{ id: " + array[n].id + ", x_coordinate: " + array[n].x_coordinate + ", y_coordinate: " + array[n].y_coordinate + ", color: " + array[n].color + ", number_of_spikes: " + array[n].number_of_spikes + "}";
-            array.toString();
-            document.getElementById('jsonObject').innerHTML =  JSON.stringify(array); 
+        document.getElementById('star-name').innerHTML = name;
+        updateStars();
 
         n++;
-        firstFlag = 1;
     }
 
-    function updateArray(id, x, y, spikes){
-
+    function updateStars(){
+        array.toString();
+        document.getElementById('jsonObject').innerHTML = JSON.stringify(array); 
     }
 
 
     function deleteStar() {
         var deleteID = document.getElementById("star-to-delete").value;
-        var bar = document.getElementById(deleteID);
-        console.log("bar: ",bar);
-        console.log("deleteID: ",deleteID);
-        //var element = document.getElementById(deleteID);
-        //element.parentNode.removeChild(element);
-        //var foo = array.indexOf(deleteID);
         var num = deleteID.match(/\d+/)[0] ;
-        var foo = num;
-        //var foo = num - 1;
-        console.log("foo: ", foo);
-        if(foo > -1){
-            array.splice( foo, 1 );
+        if(num > -1){
+            array.splice( num, 1 );
             console.log(array);
         }
 
@@ -95,8 +48,7 @@
             console.log(array[i].id);
         }
 
-        array.toString();
-        document.getElementById('jsonObject').innerHTML =  JSON.stringify(array); 
+        updateStars();
 
     }
 
