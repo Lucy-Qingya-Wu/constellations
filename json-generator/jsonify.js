@@ -20,8 +20,6 @@
         temp['color'] = color;
         temp['number_of_spikes'] = spikes;
         array.push(temp);
-        console.log(array);
-        console.log(array[n])
 
         document.getElementById('star-name').innerHTML = name;
         updateStars();
