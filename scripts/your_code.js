@@ -1,7 +1,14 @@
-var description = document.getElementById("description");
-var howManyStars = document.getElementById("how-many-stars");
-var date = new Date().toDateString()
+// Create a paragraph <p> element and name it.
+var constellationDescription = document.createElement("p");
 
-description.innerHTML = "I'm Hailey. Today is " + date + "."
-description.style.color = "pink"
-howManyStars.innerHTML = constellation["name"] + " has " + constellation["stars"].length + " stars."
+// Get a description box from document and name it.
+var descriptionBox = document.getElementById("description-box");
+
+// Append constellation description paragraph (<p>) to descriptionBox
+descriptionBox.appendChild(constellationDescription);
+
+// Put text for the constellation description.
+constellationDescription.innerHTML = constellation["name"] + " has " + constellation["stars"].length + " stars."
+
+// You can change style of elements with JavaScript! Wow~
+constellationDescription.style.color = "pink"
