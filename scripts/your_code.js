@@ -5,10 +5,10 @@ var constellationDescription = document.createElement("p");
 var descriptionBox = document.getElementById("description-box");
 
 // Append constellation description paragraph (<p>) to descriptionBox
-descriptionBox.appendChild(constellationDescription);
+// descriptionBox.appendChild(constellationDescription);
 
 // Put text for the constellation description.
-constellationDescription.innerHTML = constellation["name"] + " has " + constellation["stars"].length + " stars."
+// constellationDescription.innerHTML = constellation["name"] + " has " + constellation["stars"].length + " stars."
 
 // You can change style of elements with JavaScript! Wow~
-constellationDescription.style.color = "pink"
+// constellationDescription.style.color = "pink"
